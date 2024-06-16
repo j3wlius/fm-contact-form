@@ -139,7 +139,7 @@ body {
 	padding: 0.75rem 0.75rem;
 }
 
-.radio:first-of-type{
+.radio:first-of-type {
 	margin-bottom: 1rem;
 }
 
@@ -181,6 +181,7 @@ input[type="checkbox"] {
 	font-size: 0.75rem;
 	margin-top: 0.5rem;
 	margin-bottom: 1.5rem;
+	display: none;
 }
 
 .submit-btn {
@@ -195,4 +196,32 @@ input[type="checkbox"] {
 
 .submit-btn:hover {
 	background-color: hsl(169, 80%, 20%);
+}
+
+@media screen and (min-width: 768px) {
+	.main {
+		height: 100vh;
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		align-items: center
+	}
+	.container {
+		max-width: 700px;
+	}
+
+	.name,
+	.radios {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+	}
+
+	.radio:first-of-type {
+		margin-bottom: 0;
+	}
+
+	textarea {
+		height: 120px;
+	}
 }
