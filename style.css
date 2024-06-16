@@ -1,0 +1,198 @@
+/* CSS Variables */
+:root {
+	/* Colors */
+	--light-green: hsl(148, 38%, 91%);
+	--medium-green: hsl(169, 82%, 27%);
+	--red: hsl(0, 66%, 54%);
+	--white: hsl(0, 0%, 100%);
+	--grey-500: hsl(186, 15%, 59%);
+	--grey-900: hsl(187, 24%, 22%);
+
+	/* Typography */
+	--ff-karla: "Karla", sans-serif;
+
+	--fw-400: 400;
+	--fw-700: 700;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a,
+img,
+span,
+input,
+select,
+button,
+textarea {
+	display: block;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+input,
+select,
+button,
+textarea {
+	background: none;
+	border: none;
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+input,
+select,
+textarea {
+	width: 100%;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-family: var(--ff-karla);
+	font-size: 16px;
+}
+
+body {
+	background-color: var(--light-green);
+}
+/* End of Reset */
+
+/* Global Styles */
+.main {
+	padding-block: 2rem;
+}
+.container {
+	margin-inline: auto;
+	width: 90%;
+	background-color: var(--white);
+	border-radius: 15px;
+	box-shadow: 0 0 5px var(--grey-500);
+}
+/* End of Global */
+
+.contact-form {
+	padding: 2rem;
+}
+
+.title {
+	font-size: 2rem;
+	font-weight: var(--fw-700);
+	color: var(--grey-900);
+	margin-bottom: 2rem;
+	font-weight: var(--fw-700);
+}
+
+.form-control label {
+	display: block;
+	margin-bottom: 0.75rem;
+}
+
+.form-control label::after {
+	content: "*";
+	color: var(--medium-green);
+	margin-left: 5px;
+}
+
+.form-control input[type="text"],
+.form-control input[type="email"],
+.form-control textarea {
+	width: 100%;
+	padding: 0.5rem 0.75rem;
+	border-radius: 5px;
+	border: 1px solid var(--grey-500);
+}
+
+.form-control input[type="text"]:focus,
+.form-control input[type="email"]:focus,
+.form-control textarea:focus {
+	outline: none;
+	border-color: var(--medium-green);
+}
+
+.radio {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	border: 1px solid var(--grey-500);
+	border-radius: 5px;
+	padding: 0.75rem 0.75rem;
+}
+
+.radio:first-of-type{
+	margin-bottom: 1rem;
+}
+
+.radio.active {
+	background-color: var(--light-green);
+	color: var(--grey-900);
+	border: 1px solid var(--medium-green);
+	/* opacity: 0.75; */
+}
+
+input[type="radio"] {
+	position: relative;
+	height: 18px;
+	width: 18px;
+	accent-color: var(--medium-green);
+}
+
+textarea {
+	resize: none;
+}
+
+.checkbox-container {
+	display: flex;
+	gap: 0.5rem;
+}
+
+input[type="checkbox"] {
+	cursor: pointer;
+	position: relative;
+	height: 15px;
+	width: 15px;
+	top: 3px;
+	accent-color: var(--medium-green);
+}
+
+.error {
+	color: var(--red);
+	font-weight: var(--fw-700);
+	font-size: 0.75rem;
+	margin-top: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.submit-btn {
+	width: 100%;
+	padding-block: 1rem;
+	background-color: var(--medium-green);
+	color: var(--white);
+	border-radius: 5px;
+	font-weight: var(--fw-700);
+	transition: 0.3s;
+}
+
+.submit-btn:hover {
+	background-color: hsl(169, 80%, 20%);
+}
