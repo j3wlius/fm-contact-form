@@ -130,6 +130,7 @@ input[type="text"].error {
 	color: var(--red);
 	font-size: 0.8rem;
 	font-weight: 700;
+	/* display: none; */
 }
 
 .name > div:first-child,
@@ -154,7 +155,7 @@ input[type="text"].error {
 	border: 1px solid var(--grey-500);
 	border-radius: 5px;
 	padding: 1rem 0.5rem;
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .checkbox {
@@ -207,6 +208,39 @@ button {
 
 button:hover {
 	background-color: var(--grey-900);
+}
+
+/* .error.show {
+	display: block;
+} */
+
+.success-div {
+	background-color: var(--grey-900);
+	color: var(--white);
+	width: 80%;
+	max-width: 350px;
+	padding: 0.75rem;
+	border-radius: 7px;
+	position: relative;
+	top: 30px;
+	margin-inline: auto;
+}
+
+#success-div {
+	display: none;
+}
+
+.success-div > div {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.success-div p {
+	font-size: 12px;
+	font-weight: 700;
 }
 
 @media (min-width: 700px) {
